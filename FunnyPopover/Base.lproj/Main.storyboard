@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,169 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyPopover" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-oT-bnw">
+                                <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrP-ld-k0X">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="50"/>
+                                        <state key="normal" image="greyLike.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="     Like">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="rightToLeft" tailIndent="34" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <segue destination="AIA-qI-4wQ" kind="popoverPresentation" identifier="showPopoverLike" popoverAnchorView="vrP-ld-k0X" id="uJQ-QU-hi3">
+                                                <popoverArrowDirection key="popoverArrowDirection" down="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F1R-vP-uGM">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="50"/>
+                                        <state key="normal" image="comment.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Comment">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="11" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCJ-T3-8VY">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="50"/>
+                                        <state key="normal" image="share.png">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Share">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="8" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ufk-mO-Zkf"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timthumb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-Rx-LhR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hgb-Rx-LhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1IL-mU-8AX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vcy-oT-bnw" secondAttribute="bottom" id="9Rc-gH-cyv"/>
+                            <constraint firstItem="Hgb-Rx-LhR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jni-T1-ttt"/>
+                            <constraint firstItem="Hgb-Rx-LhR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qyx-gt-K6d"/>
+                            <constraint firstItem="Vcy-oT-bnw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Vp7-qq-Gko"/>
+                            <constraint firstItem="Vcy-oT-bnw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gw7-0j-ddh"/>
+                            <constraint firstItem="Vcy-oT-bnw" firstAttribute="top" secondItem="Hgb-Rx-LhR" secondAttribute="bottom" constant="10" id="kgR-mu-ia2"/>
+                            <constraint firstItem="Vcy-oT-bnw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rk3-UZ-hiW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Popover View Controller-->
+        <scene sceneID="RHl-Gd-wos">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="AIA-qI-4wQ" customClass="PopoverViewController" customModule="FunnyPopover" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vfc-zJ-Kfh">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-9A-mzj">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybR-gd-oZp">
+                                        <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="50"/>
+                                        <state key="normal" title="Button" image="like.png"/>
+                                        <connections>
+                                            <action selector="btnAct:" destination="AIA-qI-4wQ" eventType="touchUpInside" id="kth-p8-KxP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDw-mQ-y4P">
+                                        <rect key="frame" x="33.333333333333329" y="0.0" width="33.333333333333329" height="50"/>
+                                        <state key="normal" title="Button" image="love.png"/>
+                                        <connections>
+                                            <action selector="btnAct:" destination="AIA-qI-4wQ" eventType="touchUpInside" id="uCO-iX-BMV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-ga-mIg">
+                                        <rect key="frame" x="66.666666666666686" y="0.0" width="33.333333333333329" height="50"/>
+                                        <state key="normal" title="Button" image="haha.png"/>
+                                        <connections>
+                                            <action selector="btnAct:" destination="AIA-qI-4wQ" eventType="touchUpInside" id="Un7-Ed-PG6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYj-qU-hIn">
+                                        <rect key="frame" x="100" y="0.0" width="33.333333333333343" height="50"/>
+                                        <state key="normal" title="Button" image="sad.png"/>
+                                        <connections>
+                                            <action selector="btnAct:" destination="AIA-qI-4wQ" eventType="touchUpInside" id="j5q-y9-7gv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUm-GC-zNe">
+                                        <rect key="frame" x="133.33333333333334" y="0.0" width="33.333333333333314" height="50"/>
+                                        <state key="normal" title="Button" image="angry.png"/>
+                                        <connections>
+                                            <action selector="btnAct:" destination="AIA-qI-4wQ" eventType="touchUpInside" id="TeG-D7-8vh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOi-d0-QOL">
+                                        <rect key="frame" x="166.66666666666663" y="0.0" width="33.333333333333343" height="50"/>
+                                        <state key="normal" title="Button" image="wow.png"/>
+                                        <connections>
+                                            <action selector="btnAct:" destination="AIA-qI-4wQ" eventType="touchUpInside" id="l6o-XJ-f74"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eAp-9A-mzj" firstAttribute="width" secondItem="vfc-zJ-Kfh" secondAttribute="width" id="Gcn-nS-URG"/>
+                            <constraint firstItem="eAp-9A-mzj" firstAttribute="top" secondItem="muq-4g-2Ee" secondAttribute="top" id="Sfc-ce-9vG"/>
+                            <constraint firstAttribute="trailing" secondItem="eAp-9A-mzj" secondAttribute="trailing" id="cWM-Nw-aEd"/>
+                            <constraint firstItem="muq-4g-2Ee" firstAttribute="bottom" secondItem="eAp-9A-mzj" secondAttribute="bottom" id="fFo-p8-AcQ"/>
+                            <constraint firstItem="eAp-9A-mzj" firstAttribute="leading" secondItem="muq-4g-2Ee" secondAttribute="leading" id="kBg-KU-7g4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="muq-4g-2Ee"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="50"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXe-qR-bfQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="angry.png" width="30" height="29"/>
+        <image name="comment.png" width="30" height="30"/>
+        <image name="greyLike.png" width="40" height="40"/>
+        <image name="haha.png" width="30" height="29"/>
+        <image name="like.png" width="30" height="29"/>
+        <image name="love.png" width="30" height="29"/>
+        <image name="sad.png" width="30" height="29"/>
+        <image name="share.png" width="30" height="30"/>
+        <image name="timthumb.jpg" width="630" height="721"/>
+        <image name="wow.png" width="30" height="29"/>
+    </resources>
 </document>
